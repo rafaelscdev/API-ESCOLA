@@ -1,23 +1,13 @@
 const { DataTypes } = require('sequelize')
 const { connection } = require('../database/connection')
 
-const Aluno = connection.define('alunos', {
-    email:{
-        type: DataTypes.STRING,
-    },
-    password:{
-        type: DataTypes.STRING,
-    },
+const Curso = connection.define('cursos', {
     nome: {
         type: DataTypes.STRING,
     },
-    data_nascimento: {
-        type: DataTypes.DATE
-    },
-    celular: {
-        type: DataTypes.STRING,
+    duracao_horas: {
+        type: DataTypes.INTEGER
     }
 })
 
-module.exports = Aluno
-
+module.exports = Curso
